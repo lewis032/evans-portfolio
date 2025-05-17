@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evans Mbugua | Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #000000;
+      --text-dark: #ffffff;
+      --card-light: #f9f9f9;
+      --card-dark: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+ header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3498db;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .about {
+      padding: 2rem;
+      background: var(--card-light);
+      border-radius: 8px;
+      margin: 2rem;
+    }
+
+    .dark-mode .about {
+      background: var(--card-dark);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .project {
+      background: var(--card-light);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .dark-mode .project {
+      background: var(--card-dark);
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    .project img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #eee;
+    }
+
+    .project .caption {
+      padding: 1rem;
+    }
+
+    .project .caption h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .project .caption p {
+      margin-top: 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .dark-mode .project .caption p {
+      color: #aaa;
+    }
+    .socials {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials a img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0);
+  transition: filter 0.3s ease;
+}
+
+.dark-mode .socials a img {
+  filter: invert(1);
+}
+
+.socials a:hover img {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(180deg);
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+  <header>
+       <img src="profile.jpg" alt="Evans Mbugua">
+    <h1>Evans Mbugua</h1>
+    <p>Email: githumbugua001@gmail.com</p>
+    <div class="socials">
+  <a href="https://instagram.com/evansprofile" target="_blank" aria-label="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
+  </a>
+  <a href="https://linkedin.com/in/evansprofile" target="_blank" aria-label="LinkedIn">
+    <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" />
+  </a>
+  <a href="https://twitter.com/evansprofile" target="_blank" aria-label="Twitter">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" />
+  </a>
+  <a href="https://facebook.com/evansprofile" target="_blank" aria-label="Facebook">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" />
+  </a>
+</div>
+  </header>
+
+  <section class="about">
+    <h2>Experience</h2>
+    <p>
+      Evans Mbugua is a passionate communication and media graduate with a strong foundation in digital storytelling, public relations, and media production. With experience in both academic projects and real-world campaigns, Evans has worked on content creation, video editing, photography, and brand communication strategies. He thrives in collaborative environments and is always eager to bring ideas to life through creative visual content and strategic messaging.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <div class="project">
+      <img src="project1.png" alt="Project 1" />
+      <div class="caption">
+        <h3>Project Title 1</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project2.png" alt="Project 2" />
+      <div class="caption">
+        <h3>Project Title 2</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project3.png" alt="Project 3" />
+      <div class="caption">
+        <h3>Project Title 3</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project4.png" alt="Project 4" />
+      <div class="caption">
+        <h3>Project Title 4</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project5.png" alt="Project 5" />
+      <div class="caption">
+        <h3>Project Title 5</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project6.png" alt="Project 6" />
+      <div class="caption">
+        <h3>Project Title 6</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project7.png" alt="Project 7" />
+      <div class="caption">
+        <h3>Project Title 7</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project8.png" alt="Project 8" />
+      <div class="caption">
+        <h3>Project Title 8</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project9.png" alt="Project 9" />
+      <div class="caption">
+        <h3>Project Title 9</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="project10.png" alt="Project 10" />
+      <div class="caption">
+        <h3>Project Title 10</h3>
+        <p>Brief description about what this project is about.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
